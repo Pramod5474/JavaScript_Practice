@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even and Odd Numbers</title>
+</head>
+<body>
+  <h1>Even and Odd Numbers between 1 and 100</h1>
+
+  <h2>Even Numbers:</h2>
+  <div id="even"></div>
+
+  <h2>Odd Numbers:</h2>
+  <div id="odd"></div>
+
+  <script>
+    function displayEvenAndOddNumbers() {
+      let evenNumbers = "";
+      let oddNumbers = "";
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+          evenNumbers += i + " ";
+        } else {
+          oddNumbers += i + " ";
+        }
+      }
+
+      document.getElementById("even").textContent = evenNumbers;
+      document.getElementById("odd").textContent = oddNumbers;
+    }
+
+    displayEvenAndOddNumbers();
+  </script>
+</body>
+</html>

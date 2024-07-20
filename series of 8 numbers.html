@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Series of 8 Numbers</title>
+</head>
+<body>
+    <div id="numbersDisplay"></div>
+    <script>
+        // JavaScript code goes here
+
+        function displaySeries(series) {
+            // Display the numbers on the HTML page
+            const numbersDisplay = document.getElementById("numbersDisplay");
+            numbersDisplay.textContent = `Series of 8 Numbers: ${series.join(", ")}`;
+        }
+
+        // Example input series of 8 numbers
+        const inputSeries = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        // Call the function to display the series
+        displaySeries(inputSeries);
+    </script>
+</body>
+</html>

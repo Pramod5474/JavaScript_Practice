@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            .main-head{
+                margin-left: 10%;
+            }
+            .main-head .last{
+                align-items: center;   
+            }
+            th{
+                width: 250px;
+                height: 60px;
+                background-color: #00f2ff;
+            }
+            table{
+                border: 3px outset black;
+                width: 40%;
+                border-spacing: 15px;
+            }
+            td{
+                width: 250px;
+                height: 60px;
+                padding: 10px;
+                background-color: #00f2ff;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main-head"><h2>Employee Form</h2></div>
+            <form>
+                <div class="main-class">
+                    <table border="1">
+                        <colgroup>
+                            <col span="1" style="width: 5%;">
+                            <col span="1" style="width: 15%;">
+                        </colgroup>
+                        <tr>
+                            <td>Employee Name</td>
+                            <td><input type="text" name="user" id="user"></td>
+                        </tr>
+                        <tr>
+                            <td>Employee ID</td>
+                            <td><input type="text" name="id" id="id"></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td><textarea row="20" column="4" value="address"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td><select name="City" id="city">
+                                <option value="none" selected disabled hidden>Select an option</option>
+                                <option value="kop">Kolhapur</option>
+                                <option value="sat">Satara</option>
+                                <option value="san">Sangli</option>
+                                <option value="pune">Pune</option>
+                                <option value="kol">Kolkata</option></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Contact No</td>
+                            <td><input type="text" name="contact" id="contact"></td>
+                        </tr>
+                        <div class="last"><tr>
+                            <th colspan="2">
+                                <input type="submit" value="submit">
+                                <input type="button" value="cancel">
+                            </th>
+                        </tr></div>
+                        
+                    </table>
+
+                </div>
+
+            </form>
+
+                
+    </body>
+</html>

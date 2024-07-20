@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Even Numbers</title>
+</head>
+<body>
+    <div id="evenSumDisplay"></div>
+    <script>
+        // JavaScript code goes here
+
+        // Create an array containing numbers from 1 to 30
+        const numbersArray = Array.from({ length: 30 }, (_, index) => index + 1);
+
+        // Filter out the even numbers from the array
+        const evenNumbersArray = numbersArray.filter(number => number % 2 === 0);
+
+        // Calculate the sum of the even numbers
+        const evenSum = evenNumbersArray.reduce((sum, number) => sum + number, 0);
+
+        // Display the sum of the even numbers on the HTML page
+        const evenSumDisplay = document.getElementById("evenSumDisplay");
+        evenSumDisplay.textContent = `Sum of Even Numbers: ${evenSum}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Even Numbers</title>
+</head>
+<body>
+    <h1>Display Even Numbers</h1>
+    <button onclick="filterEvenNumbers()">Show Even Numbers</button>
+    <div>
+        <p>Even Numbers: <span id="evenNumbers"></span></p>
+    </div>
+
+    <script>
+        function filterEvenNumbers() {
+            // Create an array with numbers from 1 to 30
+            var numberArray = [];
+            for (var i = 1; i <= 30; i++) {
+                numberArray.push(i);
+            }
+
+            // Filter out the even numbers from the array
+            var evenNumbersArray = numberArray.filter(function(num) {
+                return num % 2 === 0;
+            });
+
+            // Display the even numbers
+            document.getElementById('evenNumbers').textContent = evenNumbersArray.join(", ");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+            .ab h3{
+                margin-left: 12%;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+            }
+            table{ 
+                background-color: rgb(82, 211, 120);
+                padding: 20px;
+                width: 50%;
+                border: 3px outset black;
+                border-spacing: 10px;
+            }
+            th{
+                width: 250px;
+                height: 60px;
+                border: 1px solid black;
+                align-items: center;
+            }
+            td{
+                width: 250px;
+                height: 60px;
+                border: 1px solid black;
+                padding: 7px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ab"><h3>Student Form</h3></div>
+        <form>
+            <div class="main-class">
+                <table border="1">
+                    <colgroup>
+                        <col span="1" style="width: 5%;">
+                        <col span="1" style="width: 18%;">
+                    </colgroup>
+                    <tr>
+                        <td> Student Name </td>
+                        <td> <input type="text" id="user" name="user"> </td>
+                    </tr>
+                    <tr>
+                        <td> Student Address </td>
+                        <td> <textarea cols="20" rows="4" value="address"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" name="Gender" value="male"/> Male 
+                            <input type="radio" name="Gender" value="female"/> Female </td>
+                    </tr>
+                    <tr>
+                        <td> Percentage </td>
+                        <td> <input type="text" id="Percentage" name="percent"> </td>
+                    </tr>
+                    <tr>
+                        <td> University Name </td>
+                        <td> <input type="text" id="uni name" name="uni name"> </td>
+                    </tr>
+                    <tr>
+                        <td> Course Name </td>
+                        <td> <input type="text" id="course name" name="course name"> </td>
+                    </tr>
+                    <tr>
+                        <td>Hobby</td>
+                        <td><input type="checkbox" name="game" value="on">Playing Game
+                            <input type="checkbox" name="game" value="on">Cooking
+                            <input type="checkbox" name="game" value="on">Dancing
+                            <input type="checkbox" name="game" value="on">Reading </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type="submit" value="Submit"/>
+                        <input type="button" value="New" /></th>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

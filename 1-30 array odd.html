@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Odd Numbers from an Array</title>
+</head>
+<body>
+    <h1>Odd Numbers from 1 to 30</h1>
+
+    <!-- JavaScript code to create the array and display only odd numbers -->
+    <script>
+        // Create an empty array
+        var numbersArray = [];
+
+        // Populate the array with numbers from 1 to 30
+        for (var i = 1; i <= 30; i++) {
+            numbersArray.push(i);
+        }
+
+        // Function to filter and display only odd numbers
+        function displayOddNumbers() {
+            var oddNumbers = numbersArray.filter(function (number) {
+                return number % 2 !== 0;
+            });
+
+            // Display the odd numbers in a list
+            var list = document.createElement('ul');
+            oddNumbers.forEach(function (number) {
+                var listItem = document.createElement('li');
+                listItem.textContent = number;
+                list.appendChild(listItem);
+            });
+
+            // Append the list to the body of the HTML document
+            document.body.appendChild(list);
+        }
+
+        // Call the function to display odd numbers
+        displayOddNumbers();
+    </script>
+</body>
+</html>

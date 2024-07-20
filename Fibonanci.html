@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <div>
+        <label for="numInput">Enter a number:</label>
+        <input type="number" id="numInput">
+    </div>
+    <button onclick="generateFibonacciSeries()">Generate Fibonacci Series</button>
+    <div>
+        <p id="fibonacciResult">Fibonacci Series: </p>
+    </div>
+
+    <script>
+        function generateFibonacciSeries() {
+            // Get the input value
+            var num = parseInt(document.getElementById('numInput').value);
+
+            // Generate Fibonacci series
+            var fibonacciSeries = [];
+            var a = 0, b = 1;
+
+            for (var i = 1; i <= num; i++) {
+                fibonacciSeries.push(a);
+                var nextNumber = a + b;
+                a = b;
+                b = nextNumber;
+            }
+
+            // Display the Fibonacci series
+            document.getElementById('fibonacciResult').textContent = "Fibonacci Series: " + fibonacciSeries.join(", ");
+        }
+    </script>
+</body>
+</html>

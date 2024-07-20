@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <label for="num1">Enter first number:</label>
+  <input type="number" id="num1">
+  <br>
+  <label for="num2">Enter second number:</label>
+  <input type="number" id="num2">
+  <br>
+  <button onclick="calculate()">Calculate</button>
+  <br>
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById("result").textContent = "Please enter valid numbers.";
+        return;
+      }
+
+      const addition = num1 + num2;
+      const subtraction = num1 - num2;
+      const multiplication = num1 * num2;
+
+      let division;
+      if (num2 === 0) {
+        division = "Cannot divide by zero!";
+      } else {
+        division = num1 / num2;
+      }
+
+      document.getElementById("result").innerHTML =
+        "Addition: " + addition + "<br>" +
+        "Subtraction: " + subtraction + "<br>" +
+        "Multiplication: " + multiplication + "<br>" +
+        "Division: " + division;
+    }
+  </script>
+</body>
+</html>

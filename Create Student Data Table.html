@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Data Table</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <table id="student-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll Number</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    // Sample student data
+    var students = [
+      { name: 'John Doe', rollNumber: '101', marks: 85 },
+      { name: 'Jane Smith', rollNumber: '102', marks: 92 },
+      { name: 'Alice Johnson', rollNumber: '103', marks: 78 },
+      { name: 'Bob Williams', rollNumber: '104', marks: 88 }
+    ];
+
+    // Loop through the student data and create table rows
+    students.forEach(function(student) {
+      var row = $('<tr>');
+      $('<td>').text(student.name).appendTo(row);
+      $('<td>').text(student.rollNumber).appendTo(row);
+      $('<td>').text(student.marks).appendTo(row);
+      row.appendTo('#student-table tbody');
+    });
+  </script>
+</body>
+</html>

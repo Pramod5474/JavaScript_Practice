@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>JavaScript Basics</title>
+        <script>
+            var name="Pramod Katkar";
+            var age=23;
+            var isStudent=true;
+            let city="Kolhapur";
+
+            console
+            
+            document.write(name);
+            document.write("<br>");
+            document.write(age);
+            document.write("<br>");
+            document.write(isStudent);
+            document.write("<br>");
+            document.write(city);
+            document.write("<br>");
+
+            var num1=10;
+            var num2=5;
+            var sum=num1+num2;
+            var difference=num1-num2;
+            var product=num1*num2;
+            var quotient=num1/num2;
+            var reminder=num1%num2;
+
+            document.write(sum);
+            document.write("<br>");
+            document.write(difference);
+            document.write("<br>");
+            document.write(product);
+            document.write("<br>");
+            document.write(quotient);
+            document.write("<br>");
+            document.write(reminder);
+            document.write("<br>");
+
+            if(age>=18){
+                document.write(name+ " is an adult.");
+                document.write("<br>");
+            }else{
+                document.write(name+ "is a minor.");
+                document.write("<br>");
+            }
+
+            function dyp(name){
+                document.write("Hello,"+name + "|");
+                document.write("<br>");
+            }
+
+            dyp("DYPATU");
+
+            var fruits=["Apple","Banana","Orange"];
+
+            document.write(fruits.length);
+            document.write("<br>");
+
+            for(var i=0; i<fruits.length;i++){
+                document.write(fruits[i]);
+                document.write("<br>");
+            }
+
+            var person={
+                name:"Pramod Katkar",
+                age:23,
+                isStudent:true
+            };
+
+            document.write(person.name);
+            document.write("<br>");
+            document.write(person.age);
+            document.write("<br>");
+
+
+            for(var i=0; i<=5; i++){
+                document.write(i);
+                document.write("<br>");
+            }
+
+            var j=0;
+            while(j<5){
+                document.write(j);
+                document.write("<br>");
+                j++;
+            }
+
+            var message="Hello, " +name +"|You are " +age + " Years old.";
+            document.write(message);
+            document.write("<br>");
+            document.write(message.length);
+            document.write("<br>");
+            document.write(message.toUpperCase());
+            document.write("<br>");
+            document.write(message.toLowerCase());
+            document.write("<br>");
+
+            function changeText(){
+                var element=document.getElementById("myText");
+                element.textContent="Text has been changed";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript Basics</h1>
+        <p id="myText">This is some text.</p>
+        <button onclick="changeText()">Change Text</button>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Maximum Number</title>
+</head>
+<body>
+    <h1>Find Maximum Number</h1>
+    <div>
+        <label for="numInput">Enter 20 numbers (comma-separated):</label>
+        <input type="text" id="numInput">
+    </div>
+    <button onclick="findMax()">Find Maximum Number</button>
+    <div>
+        <p>Maximum Number: <span id="maxNumber"></span></p>
+    </div>
+
+    <script>
+        function findMax() {
+            // Get the input value and split it into an array of numbers
+            var inputValues = document.getElementById('numInput').value;
+            var numArray = inputValues.split(",").map(Number);
+
+            // Find the maximum number
+            var maxNumber = Math.max(...numArray);
+
+            // Display the maximum number
+            document.getElementById('maxNumber').textContent = maxNumber;
+        }
+    </script>
+</body>
+</html>

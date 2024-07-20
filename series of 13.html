@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Series of Numbers</title>
+</head>
+<body>
+    <h1>Series of Numbers</h1>
+
+    <!-- Input form to get series parameters -->
+    <form onsubmit="return generateSeries()">
+        <label for="startNumber">Starting Number:</label>
+        <input type="number" id="startNumber" required>
+        <br>
+        <label for="seriesLength">Series Length:</label>
+        <input type="number" id="seriesLength" required>
+        <br>
+        <input type="submit" value="Generate Series">
+    </form>
+
+    <!-- Container to display the generated series -->
+    <div id="seriesContainer"></div>
+
+    <!-- JavaScript code to generate and display the series -->
+    <script>
+        function generateSeries() {
+            var startNumber = parseInt(document.getElementById('startNumber').value);
+            // var seriesLength = parseInt(document.getElementById('seriesLength').value);
+            var seriesLength=13;
+            
+            var seriesArray = [];
+            for (var i = 0; i < seriesLength; i++) {
+                seriesArray.push(startNumber + i);
+            }
+
+            var seriesContainer = document.getElementById('seriesContainer');
+            seriesContainer.innerHTML = "<p>" + seriesArray.join(", ") + "</p>";
+
+            return false; // To prevent form submission
+        }
+    </script>
+</body>
+</html>

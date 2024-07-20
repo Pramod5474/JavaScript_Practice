@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vowel or Consonant Checker</title>
+</head>
+<body>
+  <h1>Vowel or Consonant Checker</h1>
+  <label for="charInput">Enter a character:</label>
+  <input type="text" id="charInput">
+  <button onclick="checkVowelOrConsonant()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkVowelOrConsonant() {
+      const charInput = document.getElementById("charInput").value.toLowerCase();
+      const vowels = "aeiou";
+
+      if (charInput.length !== 1) {
+        document.getElementById("result").textContent = "Please enter a single character.";
+        return;
+      }
+
+      if (vowels.includes(charInput)) {
+        document.getElementById("result").textContent = charInput + " is a vowel.";
+      } else {
+        document.getElementById("result").textContent = charInput + " is a consonant.";
+      }
+    }
+  </script>
+</body>
+</html>

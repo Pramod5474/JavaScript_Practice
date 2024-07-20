@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            .main{
+                border: 7px solid green;
+            }
+            .heading1{
+                border: 7px solid orange;
+                margin: 5px;
+            }
+            .inside1{
+                border: 2px solid black;
+                position: absolute;
+            }
+            .inside2{
+                border: 4px solid rgb(34, 221, 47);
+                margin: 5px;
+            }
+            .heading2, .heading3{
+                border: 6px solid yellow;
+                border-spacing: 5px;
+                margin: 5px;
+            }
+            .heading4{
+                border: 6px solid yellow;
+            }
+            .list-include{
+                border: 7px solid rgb(234, 31, 173);
+                border-spacing: 5px;
+                margin: 5px;
+            }
+            .list-include li{
+                border: 7px solid gray;
+                border-spacing: 5px;
+                margin: 5px;
+            }
+            .list-include .order4{
+                border: 7px solid yellow;
+                margin: 5px;
+            }
+            .list-include .order5{
+                border: 7px solid aqua;
+                margin: 5px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="heading1"><h2>This is heading(for testing purpose)</h2></div>
+            <div class="heading2"><p>Paragraphs are bread and butter of HTML</p></div>
+            <div class="heading3"><p>They can include<strong style="border: 3px solid black;">strong</strong>tags</p></div>
+            <div class="list-include">
+                <ol>
+                    <li>Lists are cool!</li>
+                    <li>The list things.</li>
+                    <li> This one has an <i style="border: 3px solid rgb(123, 43, 123);">i</i> inside </li>
+                    <div class="order4"><li>Lists are cool!</li></div>
+                    <li><p>This one contains ul :</p>
+                    <div class="inside2">
+                        <ul type="circle">
+                            <li>Item 1</li>
+                            <li>Marked item</li>
+                            <li>Final item</li>
+                        </ul>
+                    </div>
+                    </li>
+                    <div class="order5"><li><h2>What happens with an h2?</h2></li></div>
+                    <li>Final Order</li>
+                </ol>
+                <div class="heading4"><p style="">A final paragraph with a dummy <li style="border: 3px solid red; position: absolute; display: flex;"><a href="#">link</a></li> inside it.</p></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 10vh;
+            background-color: green;
+        }
+
+        .navbar ul{
+            list-style-type: none;
+        }
+
+        .navbar div ul li {
+            float: left;
+            width: 150px;
+        }
+
+        .navbar div ul li a{
+            line-height: 10vh;
+            color: yellowgreen;
+            text-decoration: none;
+            display: block;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .navbar div ul li a:hover{
+            color: rgb(204, 248, 117);
+
+        }
+
+        .dropdown li{
+            width: 150px;
+            float: none !important;
+            display: none;
+            background-color: green;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar div ul li:hover .dropdown li{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+
+        </div>
+        <div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="">Enginnering</a></li>
+                        <li><a href="">Telecom</a></li>
+                        <li><a href="">Energy</a></li>
+                        <li><a href="">Fianance</a></li>
+                        <li><a href="">Consulatancy</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    
+</body>
+</html>

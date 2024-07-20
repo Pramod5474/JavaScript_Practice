@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dialog Boxes</title>
+</head>
+<body>
+  <h1>Dialog Boxes</h1>
+  <button onclick="showAlert()">Show Alert</button>
+  <button onclick="showConfirm()">Show Confirm</button>
+  <button onclick="showPrompt()">Show Prompt</button>
+
+  <script>
+    function showAlert() {
+      alert("This is an alert box!");
+    }
+
+    function showConfirm() {
+      const result = confirm("Do you want to continue?");
+      if (result) {
+        alert("You clicked OK!");
+      } else {
+        alert("You clicked Cancel!");
+      }
+    }
+
+    function showPrompt() {
+      const name = prompt("Please enter your name:");
+      if (name) {
+        alert("Hello, " + name + "!");
+      } else {
+        alert("You did not enter your name.");
+      }
+    }
+  </script>
+</body>
+</html>

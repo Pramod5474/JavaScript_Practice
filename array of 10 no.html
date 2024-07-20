@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Array Sum</title>
+</head>
+<body>
+    <h1>Calculate Array Sum</h1>
+    <div>
+        <label for="numInput">Enter 10 numbers (comma-separated):</label>
+        <input type="text" id="numInput">
+    </div>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div>
+        <p>Sum: <span id="sum"></span></p>
+    </div>
+
+    <script>
+        function calculateSum() {
+            // Get the input value and split it into an array of numbers
+            var inputValues = document.getElementById('numInput').value;
+            var numArray = inputValues.split(",").map(Number);
+
+            // Calculate the sum of the array
+            var sum = numArray.reduce(function (total, num) {
+                return total + num;
+            }, 0);
+
+            // Display the sum
+            document.getElementById('sum').textContent = sum;
+        }
+    </script>
+</body>
+</html>
